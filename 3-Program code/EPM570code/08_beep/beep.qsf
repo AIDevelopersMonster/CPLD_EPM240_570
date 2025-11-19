@@ -1,0 +1,124 @@
+# Copyright (C) 1991-2005 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic       
+# functions, and any output files any of the foregoing           
+# (including device programming or simulation files), and any    
+# associated documentation or information are expressly subject  
+# to the terms and conditions of the Altera Program License      
+# Subscription Agreement, Altera MegaCore Function License       
+# Agreement, or other applicable license agreement, including,   
+# without limitation, that your use is for the sole purpose of   
+# programming logic devices manufactured by Altera and sold by   
+# Altera or its authorized distributors.  Please refer to the    
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		beep_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 5.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:51:07  JULY 10, 2006"
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
+set_global_assignment -name VERILOG_FILE beep.v
+
+# Pin & Location Assignments
+# ==========================
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "MAX II"
+set_global_assignment -name TOP_LEVEL_ENTITY beep
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EPM570T100C5
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS OUTPUT DRIVING AN UNSPECIFIED SIGNAL"
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
+
+# Assembler Assignments
+# =====================
+set_global_assignment -name CYCLONE_CONFIGURATION_DEVICE EPCS1
+
+# ----------------
+# start CLOCK(clk)
+
+	# Timing Assignments
+	# ==================
+	set_global_assignment -name FMAX_REQUIREMENT "50.0 MHz" -section_id clk
+
+# end CLOCK(clk)
+# --------------
+
+# ------------------
+# start ENTITY(beep)
+
+	# Timing Assignments
+	# ==================
+	set_instance_assignment -name CLOCK_SETTINGS clk -to clk
+
+# end ENTITY(beep)
+# ----------------
+
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name STRATIX_CONFIGURATION_DEVICE EPCS4
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS PROGRAMMING PIN"
+set_global_assignment -name MISC_FILE "E:/A_FPGA_test/beep/beep.dpf"
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_12 -to clk
+set_location_assignment PIN_73 -to beep
+set_global_assignment -name MISC_FILE "F:/fpgatest/wx/08_beep/beep.dpf"
+set_global_assignment -name ENABLE_INIT_DONE_OUTPUT OFF
+set_location_assignment PIN_41 -to rst_n
+set_location_assignment PIN_67 -to led[1]
+set_location_assignment PIN_66 -to led[2]
+set_location_assignment PIN_61 -to led[3]
+set_location_assignment PIN_58 -to led[4]
+set_location_assignment PIN_57 -to led[5]
+set_location_assignment PIN_56 -to led[6]
+set_location_assignment PIN_55 -to led[7]
+set_location_assignment PIN_54 -to led[8]
+set_location_assignment PIN_49 -to key[1]
+set_location_assignment PIN_48 -to key[2]
+set_location_assignment PIN_47 -to key[3]
+set_location_assignment PIN_44 -to key[4]
+set_location_assignment PIN_43 -to key[5]
+set_location_assignment PIN_42 -to key[6]
+set_location_assignment PIN_53 -to ckey[1]
+set_location_assignment PIN_52 -to ckey[2]
+set_location_assignment PIN_51 -to ckey[3]
+set_location_assignment PIN_50 -to ckey[4]
+set_location_assignment PIN_87 -to dig[0]
+set_location_assignment PIN_86 -to dig[1]
+set_location_assignment PIN_85 -to dig[2]
+set_location_assignment PIN_84 -to dig[3]
+set_location_assignment PIN_95 -to dig[4]
+set_location_assignment PIN_92 -to dig[5]
+set_location_assignment PIN_91 -to dig[6]
+set_location_assignment PIN_89 -to dig[7]
+set_location_assignment PIN_76 -to seg[0]
+set_location_assignment PIN_83 -to seg[1]
+set_location_assignment PIN_81 -to seg[2]
+set_location_assignment PIN_75 -to seg[3]
+set_location_assignment PIN_74 -to seg[4]
+set_location_assignment PIN_78 -to seg[5]
+set_location_assignment PIN_82 -to seg[6]
+set_location_assignment PIN_77 -to seg[7]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
